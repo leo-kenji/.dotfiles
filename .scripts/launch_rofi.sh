@@ -2,5 +2,4 @@
 
 # Run rofi with a permanent cache folder
 # Flags for running rofi in wayland
-XDG_CACHE_HOME=${HOME}/.config/rofi rofi -show combi -normal-window -steal-focus
-/home/kenji/Documents/programming/scripts/flameshot_workaround.sh
+rofi -show combi -normal-window -steal-focus -cache-dir ${HOME}/.config/rofi
