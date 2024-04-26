@@ -29,6 +29,9 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+# Stop oh-my-zsh from updating
+DISABLE_AUTO_UPDATE=true
+
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 [[ -f "$HOME/.zsh/aliases.zsh" ]] && source "$HOME/.zsh/aliases.zsh"
 [[ -f "$HOME/.zsh/nnn" ]] && source "$HOME/.zsh/nnn"
