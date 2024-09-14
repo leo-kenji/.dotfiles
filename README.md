@@ -2,7 +2,18 @@
 
 This setup uses gnu stow
 
-## Setup
+## Script
+
+Or run:
+
+``` bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/leo-kenji/.dotfiles/main/.scripts/install_scripts/self.sh)" "" tmux zsh ros2
+```
+
+> [!CAUTION]
+> This method will overwrite files.
+
+## Manual Setup
 
 Clone this repo in your home directory.
 
