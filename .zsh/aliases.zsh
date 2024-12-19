@@ -1,4 +1,7 @@
-alias l="exa -lah"
+if command -v exa &> /dev/null; then
+    alias l="exa -lah"
+fi
+
 alias o='xdg-open'
 
 # systemctl
