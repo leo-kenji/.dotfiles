@@ -35,6 +35,7 @@ DISABLE_AUTO_UPDATE=true
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 [[ -f "$HOME/.zsh/aliases.zsh" ]] && source "$HOME/.zsh/aliases.zsh"
 [[ -f "$HOME/.zsh/nnn" ]] && source "$HOME/.zsh/nnn"
+[[ -f "$HOME/.zsh/yazi.zsh" ]] && source "$HOME/.zsh/yazi.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f $HOME/.zsh/.p10k.zsh ]] && source $HOME/.zsh/.p10k.zsh
