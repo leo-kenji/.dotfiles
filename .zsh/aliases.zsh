@@ -2,6 +2,10 @@ if command -v exa &> /dev/null; then
     alias l="exa -lah"
 fi
 
+if command -v eza &> /dev/null; then
+    alias l="eza -lah"
+fi
+
 alias o='xdg-open'
 
 # systemctl
