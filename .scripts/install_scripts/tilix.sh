@@ -1,10 +1,14 @@
-# TODO make this better with actual temp files that will be removed
+#!/usr/bin/env bash
 
-REPO_FOLDER="/tmp/tilix_catppuccin"
+TEMP_DIR=$(mktemp -d)
+REPO_FOLDER="${TEMP_DIR}/tilix_catppuccin"
 
-git clone https://github.com/catppuccin/tilix.git ${REPO_FOLDER}
+# Ensure the temporary directory is cleaned up on exit
+trap 'rm -rf "$TEMP_DIR"' EXIT
 
-cd ${REPO_FOLDER}
+git clone "https://github.com/catppuccin/tilix.git" "${REPO_FOLDER}"
 
-mkdir -p ${HOME}/.config/tilix/schemes
-mv themes/* ${HOME}/.config/tilix/schemes
+cd "$REPO_FOLDER" || exit
+
+mkdir -p "${HOME}/.config/tilix/schemes"
+mv themes/* "${HOME}/.config/tilix/schemes"
