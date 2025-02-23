@@ -1,0 +1,10 @@
+# docker compose run --rm dotfiles_test
+services:
+  dotfiles_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER: ${USER}
+    volumes:
+      - .:/home/${USER}/dotfiles_repository   # Mount the host folder to /data in the container

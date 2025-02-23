@@ -28,3 +28,18 @@ stow .
 This action will symlink all configuration files with your home directory.
 
 To incorporate a new configuration, simply add it to the repository as if it were your home directory, then rerun `stow .`.
+
+## Testing in docker
+
+Bring up the container with:
+
+``` bash
+docker compose run --rm dotfiles_test
+```
+
+Once inside the container, execute the following:
+
+``` bash
+export DOTFILES_URL=dotfiles_repository # This export allows for testing local changes instead of the online repository version
+zsh ./dotfiles_repository/.scripts/install_scripts/self.sh tmux zsh
+```
