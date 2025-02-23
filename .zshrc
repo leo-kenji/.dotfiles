@@ -40,8 +40,12 @@ DISABLE_AUTO_UPDATE=true
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f $HOME/.zsh/.p10k.zsh ]] && source $HOME/.zsh/.p10k.zsh
 
-eval "$(zoxide init zsh)"
-eval "$(atuin init zsh --disable-up-arrow)"
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+if command -v atuin &> /dev/null; then
+    eval "$(atuin init zsh --disable-up-arrow)"
+fi
 
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #     exec tmux
