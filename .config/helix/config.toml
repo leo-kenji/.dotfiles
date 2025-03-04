@@ -2,3 +2,13 @@ theme = "catppuccin_mocha"
 
 [editor]
 bufferline = "always"
+
+[editor.file-picker]
+# Show dot files
+hidden = false
+
+[keys.normal]
+# Set search to selection, add new selection at next occurrence 
+# Similar to ctrl d in VSCode
+"A-d" = ["search_selection", "extend_search_next"]
+
