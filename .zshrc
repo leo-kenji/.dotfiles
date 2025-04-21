@@ -53,3 +53,8 @@ fi
 
 # Experiment with starship
 # eval "$(starship init zsh)"
+
+# Workaround for Rio terminal in SSH sessions
+if [ "$TERM" = "rio" ]; then
+    alias ssh='TERM=xterm-256color ssh'
+fi
