@@ -19,7 +19,7 @@
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example:
-# theme = "dracula"
+theme = "catppuccin-mocha"
 
 # Padding-x
 #
@@ -126,13 +126,13 @@
 # • decorations - Set window decorations, options: "Enabled", "Disabled", "Transparent", "Buttonless"
 #
 # Example:
-# [window]
+[window]
 # width = 600
 # height = 400
 # mode = "windowed"
-# opacity = 1.0
+opacity = 0.97
 # blur = false
-# decorations = "enabled"
+decorations = "Disabled"
 
 # Renderer
 #
