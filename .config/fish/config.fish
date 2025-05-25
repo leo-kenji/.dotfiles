@@ -1,6 +1,9 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
+    # Remove greeting
+    set fish_greeting
+
     # Allow colors to be rendered
     set -x PAGER "less -R"
 
@@ -12,7 +15,6 @@ if status is-interactive
     set -x PATH $HOME/.local/bin $PATH
     set -x PATH $HOME/.cargo/bin $PATH
     set -x PATH $HOME/.config/emacs/bin $PATH
-
 
     atuin init fish --disable-up-arrow | source
     starship init fish | source
