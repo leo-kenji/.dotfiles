@@ -1,17 +1,17 @@
 # Dropping to the shell
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "!"
 run  = 'shell "$SHELL" --block'
 desc = "Open shell here"
 
 # Smart paste: paste files without entering the directory
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "P"
 run  = "plugin smart-paste"
 desc = "Paste into the hovered directory or CWD"
 
 # Smart tab: create a tab and enter the hovered directory
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "T"
 run  = "plugin smart-tab"
 desc = "Create a tab and enter the hovered directory"
@@ -30,14 +30,14 @@ desc = "Create a tab and enter the hovered directory"
 # ''', "yank" ]
 
 # cd back to the root of the current Git repository
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "g", "r" ]
 run = '''
 	shell 'ya emit cd "$(git rev-parse --show-toplevel)"'
 '''
 
 # TODO write plugin for better preview
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "<C-p>"
 run = '''
   shell 'sushi "$@"'
