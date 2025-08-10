@@ -7,4 +7,4 @@ services:
       args:
         USER: ${USER}
     volumes:
-      - .:/home/${USER}/dotfiles_repository   # Mount the host folder to /data in the container
+      - .:/home/${USER}/dotfiles_repository # Mount the repo folder to to a home folder in the container
