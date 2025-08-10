@@ -9,7 +9,7 @@ DOTFILES_URL="${DOTFILES_URL:-https://github.com/leo-kenji/.dotfiles.git}"
 cd ${HOME}
 
 # Clone the repository using the provided or default URL
-git clone ${DOTFILES_URL} .dotfiles
+git clone --depth=1 ${DOTFILES_URL} .dotfiles
 
 cd .dotfiles
 
