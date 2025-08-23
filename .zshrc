@@ -37,6 +37,9 @@ DISABLE_AUTO_UPDATE=true
 [[ -f "$HOME/.zsh/nnn" ]] && source "$HOME/.zsh/nnn"
 [[ -f "$HOME/.zsh/yazi.zsh" ]] && source "$HOME/.zsh/yazi.zsh"
 
+# Make the ctrl + U behavior like the one from BASH
+bindkey \^U backward-kill-line
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f $HOME/.zsh/.p10k.zsh ]] && source $HOME/.zsh/.p10k.zsh
 
