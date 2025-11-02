@@ -3,6 +3,8 @@ if type -q exa
     alias l "exa -lah"
 else if type -q eza
     alias l "eza -lah"
+else
+    alias l "ls -lah"
 end
 
 # Open files
