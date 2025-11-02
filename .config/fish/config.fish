@@ -16,9 +16,23 @@ if status is-interactive
     set -x PATH $HOME/.cargo/bin $PATH
     set -x PATH $HOME/.config/emacs/bin $PATH
 
-    atuin init fish --disable-up-arrow | source
-    starship init fish | source
-    zoxide init fish | source
+    if command -v atuin > /dev/null
+        atuin init fish --disable-up-arrow | source
+    else
+        echo "Atuin is not installed. Ignoring."
+    end
+
+    if command -v starship > /dev/null
+        starship init fish | source
+    else
+        echo "Starship is not installed. Ignoring."
+    end
+
+    if command -v zoxide > /dev/null
+        zoxide init fish | source
+    else
+        echo "Zoxide is not installed. Ignoring."
+    end
 
     # source ~/.config/fish/aliases.fish
     for file in ~/.config/fish/conf.d/aliases/*.fish
