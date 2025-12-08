@@ -1,14 +1,18 @@
 configuration {
-modi: "combi,drun,run";
-show-icons: true;
-combi-modi: "run,drun";
+  modi: "combi,filebrowser,drun,run";
+  show-icons: true;
+  combi-modi: "run,drun,filebrowser";
   timeout {
       action: "kb-cancel";
       delay:  0;
   }
   filebrowser {
+      directory: "/home/kenji";
       directories-first: true;
       sorting-method:    "name";
+      show-hidden: false;
+      cancel-returns-1: true;
+      command: "xdg-open";
   }
 }
 
