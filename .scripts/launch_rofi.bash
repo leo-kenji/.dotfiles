@@ -16,15 +16,12 @@ log() {
 
 trap 'log "[Error] on line ${LINENO}: \"${BASH_COMMAND}\" (exit code: ${?})"; exit 1' ERR
 
-# Environment variables.
-
-# Force Xwayland as GNOME does not support the layer shell protocol required
-# for Rofi 2.0.
-export WAYLAND_DISPLAY=""
-
 # Flags
 
 FLAGS=(
+  # Force X11 as GNOME does not support the layer shell protocol required for
+  # Rofi 2.0.
+  -x11
   # Run Rofi with a permanent cache folder (this is the history file, no idea
   # why its considered cache).
   -cache-dir "${HOME}/.config/rofi"
