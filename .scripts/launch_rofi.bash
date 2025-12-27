@@ -5,7 +5,15 @@ set -Eeuo pipefail
 # Logging and error handling.
 
 SCRIPT_NAME="$(basename "${0}")"
-LOG_FILE="${HOME}/${SCRIPT_NAME}.log"
+SCRIPT_DIR="$(realpath "$(dirname "$0")")"
+
+if mkdir -p "${SCRIPT_DIR}/logs"; then
+  LOG_DIR="${SCRIPT_DIR}/logs"
+else
+  LOG_DIR="/tmp"
+fi
+
+LOG_FILE="${LOG_DIR}/${SCRIPT_NAME}.log"
 
 # Redirect all stderr while still showing it.
 exec 2> >(tee -a "${LOG_FILE}" >&2)
