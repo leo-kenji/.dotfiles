@@ -7,6 +7,11 @@ else
     alias l "ls -lah"
 end
 
+# Alias helix, as in arch, hx is already taken.
+if type -q helix
+    alias hx "helix"
+end
+
 # Open files
 alias o xdg-open
 
